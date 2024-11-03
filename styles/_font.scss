@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Unbounded';
+  src: url(../src/fonts/Unbounded-ExtraLight.ttf) format('truetype');
+  font-weight: 200;
+}
+@font-face {
+font-family: 'Unbounded';
+src: url(../src/fonts/Unbounded-Light.ttf) format('truetype');
+font-weight: 300;
+}
+@font-face {
+  font-family: "Unbounded";
+  src: url(../src/fonts/Unbounded-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Unbounded';
+  src: url(../src/fonts/Unbounded-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Unbounded';
+  src: url(../src/fonts/Unbounded-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+
+body {
+  font-family: 'unbounded', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}

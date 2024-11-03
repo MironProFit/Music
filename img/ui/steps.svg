@@ -1,0 +1,14 @@
+<svg width="54.000000" height="54.000000" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip40_164">
+			<rect id="Steps" rx="0.000000" width="53.000000" height="53.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Steps" rx="0.000000" width="53.000000" height="53.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip40_164)">
+		<path id="Icon" d="M14.4 19.79C11.41 19.79 9 17.38 9 14.4C9 11.41 11.41 9 14.4 9C17.38 9 19.79 11.41 19.79 14.4C19.79 17.38 17.38 19.79 14.4 19.79ZM39.59 45C36.61 45 34.2 42.58 34.2 39.59C34.2 36.61 36.61 34.2 39.59 34.2C42.58 34.2 45 36.61 45 39.59C45 42.58 42.58 45 39.59 45ZM26.1 14.4L26.88 14.4C32.36 14.4 35.1 14.4 36.15 15.38C37.05 16.23 37.44 17.49 37.2 18.7C36.92 20.11 34.68 21.69 30.2 24.86L22.89 30.03C18.41 33.2 16.17 34.78 15.89 36.19C15.65 37.4 16.04 38.66 16.94 39.51C17.99 40.5 20.73 40.5 26.21 40.5L27.9 40.5" stroke="#7027E2" stroke-opacity="1.000000" stroke-width="4.000000" stroke-linejoin="round" stroke-linecap="round"/>
+	</g>
+</svg>

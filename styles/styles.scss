@@ -1,0 +1,46 @@
+@import 'font';
+@import 'mixin';
+@import 'variables';
+@import 'header_variables';
+@import 'button_variables';
+@import 'tablet';
+@import 'mobile';
+@import 'main';
+
+
+body {
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: $white;
+    background: $bg;
+    overflow-x: hidden;
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+a {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+}
+ .center {
+    padding-left: calc(50% - 915px);
+    padding-right: calc(50% - 915px);
+    }
+
+.title-h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 5%;
+    text-align: left;
+}
+
+

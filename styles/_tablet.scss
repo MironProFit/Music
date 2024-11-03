@@ -1,0 +1,19 @@
+@media (max-width: 1024px) {
+    
+    .header {
+        &::after {
+            height: 71px;
+        }
+        &__logo {
+            &::before {
+            display: none;
+            }
+        }
+        &__link {
+            &::before {
+                display: none;
+            }
+
+        }
+    }
+}
