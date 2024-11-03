@@ -54,6 +54,9 @@
             max-width: 1031px;
             height: 130px;
             background-color: $accent;
+            &:hover {
+                background: transparent;
+            }
         }
     }
 
@@ -295,6 +298,7 @@
         transition: $tr;
         &:hover {
             border: 1px solid $white; 
+            cursor: pointer;
         }
            
         &__grid {
@@ -371,6 +375,7 @@
             padding: 27px 0 27px 30px;
             border-radius: 20px;
             color: $accent;
+            cursor: pointer;
             &::after {
                 position: absolute;
                 content: '';
@@ -483,9 +488,9 @@
 
 // Блок с результитами обучения
 .result {
-    
+    padding-bottom: 150px;
     margin: 0 auto;
-    height: 394px;  
+    width: 1830px;
     &__list {
         margin-top: 50px;
         display: grid;
@@ -537,3 +542,130 @@
         }
     }
     }
+.direction {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 150px;
+    
+    &__title {
+        display: block;
+        padding-bottom: 50px;
+        
+    }
+    &__item {
+        box-sizing: border-box;
+        border-bottom: 1px solid $accent;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        color: $white;
+        position: relative;
+        width: 1830px;
+        height: 108px;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 150%;
+        transition: $tr;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url(../img/ui/arrow_up.svg);
+            width: 48px;
+            height: 48px;
+            right: 30px;
+            top: 30px;
+        }
+        &:hover {
+            border-radius: 10px;
+            background: $accent;
+            .direction__img {
+                display: block;
+
+            }
+        }
+    }
+    &__img {
+        display: none;
+        position: absolute;
+        left: 50%;
+        bottom: -90px;
+
+    }
+}
+.footer {
+    
+    &__conteiner {
+        box-sizing: border-box;
+        padding: 30px 50px;
+        width: 1830px;
+        height: 160px;
+        background: $dark;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        border-radius: 20px;
+    }
+    &__box-info {
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    &__logo {
+        width: 296px;
+        height: 22px;
+
+    }
+    &__info {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        color: $white;
+        span {
+            color: $accent;
+        }
+    }
+    &__box-social {
+        gap: 23px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+    &__social {
+        display: flex;
+        gap: 13px;
+        grid-column: 4 / 5;
+        justify-content: flex-end;
+    }
+    
+    &__social-item {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: $white;
+        transition: $tr;
+        cursor: pointer;
+        &:hover {
+            background: #000;
+        }
+    &__social-img {
+        width: 28px;
+        height: 28px;
+
+    }
+
+    }
+    &__protected {
+        grid-column: 3 / 5;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+    }
+
