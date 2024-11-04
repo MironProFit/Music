@@ -7,11 +7,12 @@
     background-repeat: no-repeat;
     gap: 50px;
     border-radius: 50px;
-    .hero-main {
+    &-main {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         flex-basis: 60%;
+        max-width: 100%;
 
         &__title {
             margin: 0 0 20px 0;

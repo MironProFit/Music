@@ -1,11 +1,11 @@
 @import 'font';
 @import 'mixin';
 @import 'variables';
+@import 'main';
+
 @import 'header_variables';
 @import 'button_variables';
-@import 'tablet';
-@import 'mobile';
-@import 'main';
+
 
 
 body {
@@ -42,5 +42,9 @@ p {
     letter-spacing: 5%;
     text-align: left;
 }
+
+@import 'mobile';
+@import 'tablet';
+
 
 

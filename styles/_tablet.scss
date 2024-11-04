@@ -17,3 +17,16 @@
         }
     }
 }
+@media (max-width: 1870px) {
+    .hero {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        &-main {
+            grid-column: span 4;
+        }
+        &-info {
+            grid-column: span 5;
+            
+        }
+    }
+}
