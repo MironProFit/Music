@@ -258,7 +258,6 @@ a {
 .course {
   display: flex;
   gap: 70px;
-  width: 100%;
 }
 .course-control {
   display: flex;
@@ -614,7 +613,13 @@ a {
   color: white;
 }
 .footer__info span {
+  cursor: pointer;
   color: #7027E2;
+  box-shadow: 0 4px 0 -3px #7027E2;
+  transition: 0.3s;
+}
+.footer__info span:hover {
+  box-shadow: 0 0px 0 -3px #7027E2;
 }
 .footer__box-social {
   gap: 23px;
@@ -673,13 +678,13 @@ a {
   top: 0;
   margin: 0 20px;
 }
-.header .header__logo {
+.header__logo {
   position: relative;
   background-color: #7027E2;
   padding: 20px 45px 0 45px;
   border-radius: 10px 0 0 0;
 }
-.header .header__logo::after {
+.header__logo::after {
   content: "";
   position: absolute;
   background-image: url(../img/heder-bottom-right.svg);
@@ -689,7 +694,7 @@ a {
   left: 0;
   transform: scaleX(-1);
 }
-.header .header__logo::before {
+.header__logo::before {
   position: absolute;
   width: 93px;
   height: 71px;
@@ -698,17 +703,14 @@ a {
   top: 0;
   right: -50px;
 }
-.header .header__link {
-  position: relative;
-  background-color: #7027E2;
-  color: white;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 25px;
+.header__info {
   padding: 20px 45px 0 45px;
   border-radius: 0 10px 0 0;
+  position: relative;
+  padding: 20px 45px 0 45px;
+  background-color: #7027E2;
 }
-.header .header__link::after {
+.header__info::after {
   content: "";
   position: absolute;
   background-image: url(../img/heder-bottom-right.svg);
@@ -717,7 +719,7 @@ a {
   bottom: -24px;
   right: 0;
 }
-.header .header__link::before {
+.header__info::before {
   position: absolute;
   width: 93px;
   height: 71px;
@@ -727,8 +729,23 @@ a {
   left: -50px;
   transform: scaleX(-1);
 }
-.header .header__link:active {
+.header__info:active {
   color: white;
+}
+.header__link {
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  border-radius: 0 10px 0 0;
+  transition: 0.3s;
+  padding-bottom: 5px;
+}
+@media (hover: hover) {
+  .header__link:hover {
+    border-bottom: 1px solid #7027E2;
+  }
 }
 
 .buttom-primary {

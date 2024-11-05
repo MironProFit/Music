@@ -20,7 +20,7 @@
     }
     
 
-    .header__logo {
+    &__logo {
         position: relative;
         background-color: $accent;
         padding: 20px 45px 0 45px;
@@ -46,15 +46,13 @@
         }
 
     }
-    .header__link {
-        position: relative;
-        background-color: $accent;
-        color: $white;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 25px;
+    &__info {
         padding: 20px 45px 0 45px;
-        border-radius:  0 10px 0  0 ;
+        border-radius:  0 10px 0  0;
+        position: relative;
+        padding: 20px 45px 0 45px;
+        background-color: $accent;
+
         &::after {
             content: '';
             position: absolute;
@@ -78,5 +76,23 @@
             &:active {
                 color: $white;
             }
+
+    }
+    &__link {
+        border-bottom: 1px solid $white;
+        color: $white;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 25px;
+        border-radius:  0 10px 0  0 ;
+        transition: $tr;
+        padding-bottom: 5px;
+        @media (hover: hover) {
+            &:hover {
+            border-bottom: 1px solid $accent;
+            }
+        }
+        
+        
     }
 }

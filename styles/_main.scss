@@ -233,7 +233,7 @@
 .course {
     display: flex;
     gap: 70px;
-    width: 100%;
+    // width: 100%;
     
     &-control {
         display: flex;
@@ -625,7 +625,14 @@
         line-height: 150%;
         color: $white;
         span {
+            cursor: pointer;
             color: $accent;
+            box-shadow: 0 4px 0 -3px $accent ;
+            transition: $tr;
+            &:hover {
+                box-shadow: 0 0px 0 -3px $accent ;
+
+            }
         }
     }
     &__box-social {
