@@ -25,6 +25,11 @@
         background-color: $accent;
         padding: 20px 45px 0 45px;
         border-radius: 10px 0 0 0;
+        @media (max-width: $r-desk) {
+            padding: 20px 20px 0 20px;
+
+        }
+        
         &::after {
             content: '';
             position: absolute;

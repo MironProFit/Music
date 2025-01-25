@@ -1,13 +1,15 @@
 .hero {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     margin-top: 135px;
     padding: 100px 50px;
-    display: flex;
     background-image: url(../img/bg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     gap: 50px;
     border-radius: 50px;
     &-main {
+        grid-column: span 7;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -46,8 +48,13 @@
                 text-align: left;
             }
             &__img {
-                @include img-hero;
-                
+                position: absolute;
+                top: -68px;
+                right: -39px;
+                bottom: -30px;
+                width: 337px;
+                height: 274px;
+                z-index: -1;
             }
         }
     
@@ -62,10 +69,10 @@
     }
 
     .hero-info {
+        grid-column: span 5;
         display: flex;
         gap: 20px;
         flex-direction: column;
-        flex-basis: 40%;
         padding-right: 80px;
         &:hover {
             cursor: pointer;
@@ -85,6 +92,10 @@
            
             &:hover {
                 transition: $tr;
+                .info-box__icon {
+                    border: 1px solid $accent;
+                    background: $accent;
+                    }
                 
                 .info-box__decor {
                     background-color: $accent;
@@ -125,27 +136,18 @@
                 text-align: left;
             }
             .info-box__decor {
-                box-sizing: border-box;
-                border: 1px solid $white;
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                position: absolute;
-                width: 50px;
-                height: 50px;
-                right: -164px;
-                top: 7px;
-                justify-content: center;
+                &::after, &::before {
+                    height: 163px;
+                    width: clamp(701px, 5vw, 450px);
+                    left: 0;
+                    top: -10px;
+                }
                 &::after {
                     content: "";
                     position: absolute;
-                    width: 649px;
-                    height: 151px;
                     background-image: url(../img/card.svg);
                     background-repeat: no-repeat;
                     background-size: contain;
-                    left: -593px;
-                    top: -2px;
                     opacity: 1;
                     }
                 &::before {
@@ -153,24 +155,35 @@
                     transform: translate(50%, -50%) scale(0);
                     content: "";
                     position: absolute;
-                    width: 649px;
-                    height: 151px;
                     background-image: url(../img/card-hover.svg);
                     background-repeat: no-repeat;
                     background-size: contain;
-                    left: -596px;
-                    top: -2px;
-                    
                     opacity: 0;
                     z-index: -1;
                     }
-
+                    
+                }
+                    .info-box__icon {
+                        width: 55px;
+                        height: 55px;
+                        top: -7px;
+                        right: -215px;
+                        position: absolute;
+                        border: 1px solid white;
+                        border-radius: 10px;
+                        box-sizing: border-box;
+                        display: flex;                    ;
+                        align-items: center;
+                        position: absolute;
+                        justify-content: center;
+                        
+                        
+                    }
                 
-            }
         }
 }
 .tag-animation {
-    width: 1830px;
+    // width: 1830px;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -232,8 +245,9 @@
 
 .course {
     display: flex;
+    flex-direction: row;
     gap: 70px;
-    // width: 100%;
+    padding-bottom: 150px;
     
     &-control {
         display: flex;
@@ -371,7 +385,7 @@
             font-weight: 400;
             line-height: 110%;
             text-align: left;
-            width: 1365px;
+            width: 100%;
             height: 90px;
             padding: 27px 0 27px 30px;
             border-radius: 20px;
@@ -397,7 +411,7 @@
         }
         &__list{
             box-sizing: border-box;
-            width: 1365px;
+            width: 100%;
             padding-left: 50px;
             padding-top: 30px;
             padding-bottom: 30px;
@@ -444,17 +458,23 @@
     .steps {
         box-sizing: border-box;
         padding-top: 150px;
+        padding-left: 45px;
+        padding-right: 45px;
+        margin: 0 auto;
         max-width: 1920px;
-        height: 592px;
-        margin: 150px auto;        background: linear-gradient(180.00deg, rgb(31, 32, 35),rgb(112, 39, 226) 50%,rgb(31, 32, 35) 100%);
+        background: linear-gradient(180.00deg, rgb(31, 32, 35),rgb(112, 39, 226) 50%,rgb(31, 32, 35) 100%);
         border: 1px solid $white;
         border-radius: 50px;
+
+        
         
         &__list {
             padding-top: 50px;
+            padding-bottom: 100px;
             width: 100%;
             display: flex;
             flex-direction: row;
+            flex-wrap: nowrap;
             gap: 30px;
             align-items: center;
             justify-content: center;
@@ -489,9 +509,12 @@
 
 // Блок с результитами обучения
 .result {
-    padding-bottom: 150px;
+    // padding-bottom: 150px;
+    // padding-top: 150px;
     margin: 0 auto;
-    width: 1830px;
+    &__title {
+        margin-top: 150px;
+    }
     &__list {
         margin-top: 50px;
         display: grid;
@@ -527,7 +550,7 @@
         line-height: 110%;
     }
     &__desc {
-        width: 375px;
+        // min-width: 375px;
         color: $dark;
         font-size: 16px;
         font-weight: 400;
@@ -550,8 +573,8 @@
     padding-bottom: 150px;
     
     &__title {
-        display: block;
-        padding-bottom: 50px;
+        padding-top: 150px;
+    padding-bottom: 50px;
         
     }
     &__item {
@@ -562,7 +585,7 @@
         align-items: center;
         color: $white;
         position: relative;
-        width: 1830px;
+        width: 100%;
         height: 108px;
         font-size: 32px;
         font-weight: 400;
@@ -600,7 +623,7 @@
     &__conteiner {
         box-sizing: border-box;
         padding: 30px 50px;
-        width: 1830px;
+        max-width: 1920px;
         height: 160px;
         background: $dark;
         display: flex;

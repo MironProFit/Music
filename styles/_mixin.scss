@@ -5,4 +5,9 @@
     bottom: -30px;
     width: 337px;
     height: 274px;
+    
+    @media (max-width: 1530px) {
+        z-index: -1;
+    opacity: 0.5;
 }
+    }
